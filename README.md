@@ -26,7 +26,7 @@ Outputs written to the same folder:
 3. **Models:** logistic regression, random forest, extra trees, LightGBM, XGBoost, CatBoost, a residual MLP (seed-averaged,
    short training) and GraphSAGE. Class imbalance is handled with class weights.
 4. **Base blend:** rank-average of ResMLP, LightGBM, XGBoost, CatBoost, ExtraTrees and GraphSAGE
-   (`Blend_ResMLP+LGB+XGB+Cat+ET+GNN`). Fixed by design, one member per model family.
+   (`Blend_ResMLP+LGB+XGB+Cat+ET+GNN`).
 5. **Late-regime detection (no labels):** a step is flagged when its alarm rate (share of its rows in the global top 5% of
    blend scores) falls below 25% of the median of earlier steps. This marks steps 43-49 as "late".
 6. **Self-training on the late rows:** within each late step, the top 20% of rows by blend rank become pseudo-positives and
